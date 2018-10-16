@@ -1,0 +1,24 @@
+.editor {
+  height: 100vh;
+  text-align: left;
+}
+.sandbox {
+  display: flex;
+}
+.sandbox > div {
+  height: 100vh;
+  flex: 1;
+}
+
+.output {
+  background-color: #333333;
+  padding: 20px;
+  color: aliceblue;
+}
+
+.outline {
+  background-color: #201d1d;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  padding: 4px;
+}
