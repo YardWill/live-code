@@ -14,6 +14,7 @@ const paths = require('./paths');
 const getClientEnvironment = require('./env');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -369,6 +370,9 @@ module.exports = {
       tsconfig: paths.appTsProdConfig,
       tslint: paths.appTsLint,
     }),
+    new MonacoWebpackPlugin({
+      languages: ['javascript', 'typescript']
+    })
   ],
   // Some libraries import Node modules but don't use them in the browser.
   // Tell Webpack to provide empty mocks for them so importing them works.
