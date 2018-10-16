@@ -1,5 +1,5 @@
 .editor {
-  height: 100vh;
+  height: 100%;
   text-align: left;
 }
 .sandbox {
@@ -21,4 +21,18 @@
   margin-bottom: 20px;
   border-radius: 4px;
   padding: 4px;
+}
+
+.head {
+  display: flex;
+  background-color: #7d7d7d;
+  padding: 20px;
+  color: #000;
+}
+
+.head > div {
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-right: 20px;
+  background-color: #fff;
 }

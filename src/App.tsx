@@ -57,10 +57,17 @@ class App extends Component <IProps, IState> {
     }
   }
 
+  public clear = () => {
+    this.setState({output: []})
+  }
+
   public render() {
     return (
       <div className="App">
-        <div onClick={this.exec}>运行</div>
+        <div className="head">
+          <div onClick={this.exec}>运行</div>
+          <div onClick={this.clear}>清除日志</div>
+        </div>
         <div className="sandbox">
           <div ref={this.containerRef} className="editor" />
           <div className="output">
